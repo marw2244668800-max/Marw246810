@@ -1,0 +1,102 @@
+/* تنسيقات عامة للصفحة */
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* تنسيقات حاوية تسجيل الدخول */
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 360px;
+    text-align: center;
+}
+
+/* تنسيقات الشعار */
+.logo img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+/* تنسيقات حقول الإدخال */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: calc(100% - 24px); /* خصم البادينغ */
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 16px;
+    direction: rtl; /* اتجاه الكتابة من اليمين لليسار */
+    text-align: right;
+}
+
+/* تنسيقات زر تسجيل الدخول */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #166fe5;
+}
+
+/* تنسيقات رابط نسيت كلمة السر */
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* تنسيقات الخط الفاصل */
+.separator {
+    border: 0;
+    height: 1px;
+    background-color: #dadde1;
+    margin: 20px 0;
+}
+
+/* تنسيقات زر إنشاء حساب جديد */
+.create-account-button {
+    width: 60%;
+    padding: 12px;
+    background-color: #42b72a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.create-account-button:hover {
+    background-color: #36a420;
+}
+
+/* تنسيقات شعار ميتا */
+.meta-logo img {
+    width: 80px;
+    margin-top: 20px;
+}

